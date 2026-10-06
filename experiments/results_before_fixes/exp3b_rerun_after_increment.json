@@ -1,0 +1,952 @@
+{
+  "nammamart_etl_sudarshan": {
+    "run_state": "success",
+    "run_duration_s": 13.3,
+    "tasks": [
+      {
+        "task_id": "extract_stores",
+        "state": "success",
+        "try_number": 1,
+        "start_offset_s": 0.0,
+        "duration_s": 1.2,
+        "end": "2026-10-06T16:49:00.228663+00:00"
+      },
+      {
+        "task_id": "extract_payments",
+        "state": "success",
+        "try_number": 1,
+        "start_offset_s": 0.0,
+        "duration_s": 1.1,
+        "end": "2026-10-06T16:49:00.190139+00:00"
+      },
+      {
+        "task_id": "extract_customers",
+        "state": "success",
+        "try_number": 1,
+        "start_offset_s": 0.0,
+        "duration_s": 1.1,
+        "end": "2026-10-06T16:49:00.164294+00:00"
+      },
+      {
+        "task_id": "extract_orders",
+        "state": "success",
+        "try_number": 1,
+        "start_offset_s": 0.0,
+        "duration_s": 1.1,
+        "end": "2026-10-06T16:49:00.197623+00:00"
+      },
+      {
+        "task_id": "extract_products",
+        "state": "success",
+        "try_number": 1,
+        "start_offset_s": 0.0,
+        "duration_s": 1.2,
+        "end": "2026-10-06T16:49:00.247450+00:00"
+      },
+      {
+        "task_id": "validate_products",
+        "state": "success",
+        "try_number": 1,
+        "start_offset_s": 2.2,
+        "duration_s": 0.8,
+        "end": "2026-10-06T16:49:02.066780+00:00"
+      },
+      {
+        "task_id": "validate_stores",
+        "state": "success",
+        "try_number": 1,
+        "start_offset_s": 2.2,
+        "duration_s": 0.8,
+        "end": "2026-10-06T16:49:02.029371+00:00"
+      },
+      {
+        "task_id": "validate_customers",
+        "state": "success",
+        "try_number": 1,
+        "start_offset_s": 2.2,
+        "duration_s": 0.8,
+        "end": "2026-10-06T16:49:02.065584+00:00"
+      },
+      {
+        "task_id": "validate_orders",
+        "state": "success",
+        "try_number": 1,
+        "start_offset_s": 3.3,
+        "duration_s": 1.0,
+        "end": "2026-10-06T16:49:03.371111+00:00"
+      },
+      {
+        "task_id": "validate_payments",
+        "state": "success",
+        "try_number": 1,
+        "start_offset_s": 4.4,
+        "duration_s": 0.9,
+        "end": "2026-10-06T16:49:04.344158+00:00"
+      },
+      {
+        "task_id": "quarantine_failed_rows",
+        "state": "success",
+        "try_number": 1,
+        "start_offset_s": 5.5,
+        "duration_s": 1.5,
+        "end": "2026-10-06T16:49:06.145666+00:00"
+      },
+      {
+        "task_id": "log_dq_results",
+        "state": "success",
+        "try_number": 1,
+        "start_offset_s": 5.5,
+        "duration_s": 1.1,
+        "end": "2026-10-06T16:49:05.720370+00:00"
+      },
+      {
+        "task_id": "transform_data",
+        "state": "success",
+        "try_number": 1,
+        "start_offset_s": 7.7,
+        "duration_s": 0.9,
+        "end": "2026-10-06T16:49:07.619539+00:00"
+      },
+      {
+        "task_id": "load_warehouse",
+        "state": "success",
+        "try_number": 1,
+        "start_offset_s": 8.8,
+        "duration_s": 1.0,
+        "end": "2026-10-06T16:49:08.847122+00:00"
+      },
+      {
+        "task_id": "reconcile_payments",
+        "state": "success",
+        "try_number": 1,
+        "start_offset_s": 10.0,
+        "duration_s": 0.8,
+        "end": "2026-10-06T16:49:09.865628+00:00"
+      },
+      {
+        "task_id": "build_report",
+        "state": "success",
+        "try_number": 1,
+        "start_offset_s": 11.1,
+        "duration_s": 1.0,
+        "end": "2026-10-06T16:49:11.104877+00:00"
+      },
+      {
+        "task_id": "write_run_audit_row",
+        "state": "success",
+        "try_number": 1,
+        "start_offset_s": 12.2,
+        "duration_s": 1.0,
+        "end": "2026-10-06T16:49:12.224989+00:00"
+      }
+    ],
+    "retry_attempts": [],
+    "states": {
+      "success": 17
+    },
+    "logical_date": "2026-10-06T16:48:55+00:00",
+    "pipeline_runs": {
+      "status": "SUCCESS",
+      "rows_extracted": 5372,
+      "rows_loaded": 3023,
+      "rows_quarantined": 142,
+      "failed_tasks": "",
+      "notes": "{\"fact_inserted\": 0, \"fact_total\": 2458, \"fact_unchanged\": 2458, \"fact_updated\": 0, \"files\": {\"customers.csv\": 405, \"orders.csv\": 2572, \"payments.csv\": 2228, \"products.csv\": 152, \"stores.csv\": 15}, \"mismatches\": 341, \"quarantine_files\": [\"orders_failed_exp3b_etl_1006164559.csv\", \"payments_failed_exp3b_etl_1006164559.csv\", \"customers_failed_exp3b_etl_1006164559.csv\", \"products_failed_exp3b_etl_1006164559.csv\"]}"
+    },
+    "dq_checks_with_failures": [
+      {
+        "check_name": "BATCH_ORDERS_FRESH",
+        "severity": "Warning",
+        "status": "WARN",
+        "rows_checked": 1,
+        "rows_failed": 1
+      },
+      {
+        "check_name": "CUS_CITY_NOT_NULL",
+        "severity": "Warning",
+        "status": "WARN",
+        "rows_checked": 405,
+        "rows_failed": 6
+      },
+      {
+        "check_name": "CUS_CUSTOMER_ID_UNIQUE",
+        "severity": "Critical",
+        "status": "FAIL",
+        "rows_checked": 405,
+        "rows_failed": 5
+      },
+      {
+        "check_name": "CUS_EMAIL_FORMAT",
+        "severity": "Warning",
+        "status": "WARN",
+        "rows_checked": 405,
+        "rows_failed": 12
+      },
+      {
+        "check_name": "CUS_LOYALTY_TIER_CASING",
+        "severity": "Warning",
+        "status": "WARN",
+        "rows_checked": 405,
+        "rows_failed": 8
+      },
+      {
+        "check_name": "CUS_PHONE_10_DIGITS",
+        "severity": "Warning",
+        "status": "WARN",
+        "rows_checked": 405,
+        "rows_failed": 7
+      },
+      {
+        "check_name": "CUS_PINCODE_6_DIGITS",
+        "severity": "Warning",
+        "status": "WARN",
+        "rows_checked": 405,
+        "rows_failed": 3
+      },
+      {
+        "check_name": "CUS_SIGNUP_DATE_NOT_FUTURE",
+        "severity": "Warning",
+        "status": "WARN",
+        "rows_checked": 405,
+        "rows_failed": 3
+      },
+      {
+        "check_name": "ORD_AMOUNT_MATCHES_FORMULA",
+        "severity": "Critical",
+        "status": "FAIL",
+        "rows_checked": 2562,
+        "rows_failed": 18
+      },
+      {
+        "check_name": "ORD_CUSTOMER_ID_NOT_NULL",
+        "severity": "Critical",
+        "status": "FAIL",
+        "rows_checked": 2562,
+        "rows_failed": 18
+      },
+      {
+        "check_name": "ORD_DELIVERED_HAS_MINUTES",
+        "severity": "Critical",
+        "status": "FAIL",
+        "rows_checked": 2562,
+        "rows_failed": 8
+      },
+      {
+        "check_name": "ORD_DELIVERY_MINUTES_MAX",
+        "severity": "Critical",
+        "status": "FAIL",
+        "rows_checked": 2562,
+        "rows_failed": 6
+      },
+      {
+        "check_name": "ORD_DISCOUNT_RANGE",
+        "severity": "Critical",
+        "status": "FAIL",
+        "rows_checked": 2562,
+        "rows_failed": 3
+      },
+      {
+        "check_name": "ORD_ORDER_ID_UNIQUE",
+        "severity": "Critical",
+        "status": "FAIL",
+        "rows_checked": 2562,
+        "rows_failed": 12
+      },
+      {
+        "check_name": "ORD_ORDER_TS_NOT_FUTURE",
+        "severity": "Critical",
+        "status": "FAIL",
+        "rows_checked": 2562,
+        "rows_failed": 7
+      },
+      {
+        "check_name": "ORD_ORDER_TS_NOT_NULL",
+        "severity": "Critical",
+        "status": "FAIL",
+        "rows_checked": 2562,
+        "rows_failed": 1
+      },
+      {
+        "check_name": "ORD_ORDER_TS_VALID",
+        "severity": "Critical",
+        "status": "FAIL",
+        "rows_checked": 2562,
+        "rows_failed": 5
+      },
+      {
+        "check_name": "ORD_PAYMENT_MODE_STANDARDISED",
+        "severity": "Warning",
+        "status": "WARN",
+        "rows_checked": 2562,
+        "rows_failed": 8
+      },
+      {
+        "check_name": "ORD_PAYMENT_MODE_VALID",
+        "severity": "Critical",
+        "status": "FAIL",
+        "rows_checked": 2562,
+        "rows_failed": 2
+      },
+      {
+        "check_name": "ORD_PRODUCT_EXISTS",
+        "severity": "Critical",
+        "status": "FAIL",
+        "rows_checked": 2562,
+        "rows_failed": 9
+      },
+      {
+        "check_name": "ORD_QUANTITY_POSITIVE",
+        "severity": "Critical",
+        "status": "FAIL",
+        "rows_checked": 2562,
+        "rows_failed": 10
+      },
+      {
+        "check_name": "ORD_STATUS_CASING",
+        "severity": "Warning",
+        "status": "WARN",
+        "rows_checked": 2562,
+        "rows_failed": 2
+      },
+      {
+        "check_name": "ORD_STATUS_VALID",
+        "severity": "Critical",
+        "status": "FAIL",
+        "rows_checked": 2562,
+        "rows_failed": 3
+      },
+      {
+        "check_name": "ORD_STORE_EXISTS",
+        "severity": "Critical",
+        "status": "FAIL",
+        "rows_checked": 2562,
+        "rows_failed": 5
+      },
+      {
+        "check_name": "PAY_AMOUNT_MATCHES_ORDER",
+        "severity": "Warning",
+        "status": "WARN",
+        "rows_checked": 2228,
+        "rows_failed": 14
+      },
+      {
+        "check_name": "PAY_AMOUNT_POSITIVE",
+        "severity": "Critical",
+        "status": "FAIL",
+        "rows_checked": 2228,
+        "rows_failed": 10
+      },
+      {
+        "check_name": "PAY_MODE_STANDARDISED",
+        "severity": "Warning",
+        "status": "WARN",
+        "rows_checked": 2228,
+        "rows_failed": 8
+      },
+      {
+        "check_name": "PAY_MODE_VALID",
+        "severity": "Critical",
+        "status": "FAIL",
+        "rows_checked": 2228,
+        "rows_failed": 2
+      },
+      {
+        "check_name": "PAY_ORDER_EXISTS",
+        "severity": "Critical",
+        "status": "FAIL",
+        "rows_checked": 2228,
+        "rows_failed": 8
+      },
+      {
+        "check_name": "PAY_PAYMENT_ID_UNIQUE",
+        "severity": "Critical",
+        "status": "FAIL",
+        "rows_checked": 2228,
+        "rows_failed": 4
+      },
+      {
+        "check_name": "PAY_TS_NOT_FUTURE",
+        "severity": "Critical",
+        "status": "FAIL",
+        "rows_checked": 2228,
+        "rows_failed": 7
+      },
+      {
+        "check_name": "PRD_CATEGORY_NOT_NULL",
+        "severity": "Warning",
+        "status": "WARN",
+        "rows_checked": 152,
+        "rows_failed": 3
+      },
+      {
+        "check_name": "PRD_COST_LE_MRP",
+        "severity": "Warning",
+        "status": "WARN",
+        "rows_checked": 152,
+        "rows_failed": 4
+      },
+      {
+        "check_name": "PRD_MRP_POSITIVE",
+        "severity": "Warning",
+        "status": "WARN",
+        "rows_checked": 152,
+        "rows_failed": 1
+      },
+      {
+        "check_name": "PRD_PRODUCT_ID_UNIQUE",
+        "severity": "Critical",
+        "status": "FAIL",
+        "rows_checked": 152,
+        "rows_failed": 2
+      },
+      {
+        "check_name": "STO_CAPACITY_POSITIVE",
+        "severity": "Warning",
+        "status": "WARN",
+        "rows_checked": 15,
+        "rows_failed": 1
+      },
+      {
+        "check_name": "STO_ZONE_NOT_NULL",
+        "severity": "Warning",
+        "status": "WARN",
+        "rows_checked": 15,
+        "rows_failed": 1
+      }
+    ],
+    "dq_checks_written": 65,
+    "counts": {
+      "etl_fact_orders": 2458,
+      "etl_fact_delivered_revenue": 1210421.3,
+      "stg_orders_total": 2550,
+      "stg_orders_clean": 2458,
+      "mart_delivered_revenue": 1210421.3,
+      "raw_orders": 2572,
+      "raw_payments": 2228,
+      "raw_customers": 405,
+      "raw_file_registry": 6,
+      "etl_order_changes": 10,
+      "stg_order_changes": 10
+    },
+    "dag_id": "nammamart_etl_sudarshan",
+    "run_id": "exp3b_etl_1006164559",
+    "final_state": "success",
+    "conf": {
+      "data_dir": "/home/sudar/nm_exp/data/with_increment",
+      "warehouse_path": "/home/sudar/nm_exp/w_exp123.duckdb",
+      "load_increments": true,
+      "as_of": ""
+    }
+  },
+  "nammamart_elt_sudarshan": {
+    "run_state": "success",
+    "run_duration_s": 34.2,
+    "tasks": [
+      {
+        "task_id": "extract_customers",
+        "state": "success",
+        "try_number": 1,
+        "start_offset_s": 0.0,
+        "duration_s": 1.1,
+        "end": "2026-10-06T16:49:17.266945+00:00"
+      },
+      {
+        "task_id": "extract_products",
+        "state": "success",
+        "try_number": 1,
+        "start_offset_s": 0.0,
+        "duration_s": 0.9,
+        "end": "2026-10-06T16:49:17.013544+00:00"
+      },
+      {
+        "task_id": "extract_payments",
+        "state": "success",
+        "try_number": 1,
+        "start_offset_s": 0.0,
+        "duration_s": 0.9,
+        "end": "2026-10-06T16:49:17.030487+00:00"
+      },
+      {
+        "task_id": "extract_stores",
+        "state": "success",
+        "try_number": 1,
+        "start_offset_s": 0.0,
+        "duration_s": 1.0,
+        "end": "2026-10-06T16:49:17.146553+00:00"
+      },
+      {
+        "task_id": "extract_orders",
+        "state": "success",
+        "try_number": 1,
+        "start_offset_s": 0.0,
+        "duration_s": 1.3,
+        "end": "2026-10-06T16:49:17.491421+00:00"
+      },
+      {
+        "task_id": "load_raw_payments",
+        "state": "success",
+        "try_number": 1,
+        "start_offset_s": 1.2,
+        "duration_s": 1.5,
+        "end": "2026-10-06T16:49:18.873989+00:00"
+      },
+      {
+        "task_id": "load_raw_products",
+        "state": "success",
+        "try_number": 1,
+        "start_offset_s": 1.2,
+        "duration_s": 2.0,
+        "end": "2026-10-06T16:49:19.317435+00:00"
+      },
+      {
+        "task_id": "load_raw_stores",
+        "state": "success",
+        "try_number": 1,
+        "start_offset_s": 1.2,
+        "duration_s": 3.2,
+        "end": "2026-10-06T16:49:20.540969+00:00"
+      },
+      {
+        "task_id": "load_raw_customers",
+        "state": "success",
+        "try_number": 1,
+        "start_offset_s": 1.2,
+        "duration_s": 4.6,
+        "end": "2026-10-06T16:49:21.984368+00:00"
+      },
+      {
+        "task_id": "load_raw_orders",
+        "state": "success",
+        "try_number": 1,
+        "start_offset_s": 2.3,
+        "duration_s": 1.6,
+        "end": "2026-10-06T16:49:20.068628+00:00"
+      },
+      {
+        "task_id": "load_raw_orders_increment",
+        "state": "success",
+        "try_number": 1,
+        "start_offset_s": 4.0,
+        "duration_s": 1.5,
+        "end": "2026-10-06T16:49:21.686437+00:00"
+      },
+      {
+        "task_id": "stg_products",
+        "state": "success",
+        "try_number": 1,
+        "start_offset_s": 4.0,
+        "duration_s": 0.9,
+        "end": "2026-10-06T16:49:21.049988+00:00"
+      },
+      {
+        "task_id": "stg_stores",
+        "state": "success",
+        "try_number": 1,
+        "start_offset_s": 5.1,
+        "duration_s": 1.2,
+        "end": "2026-10-06T16:49:22.421945+00:00"
+      },
+      {
+        "task_id": "stg_customers",
+        "state": "success",
+        "try_number": 1,
+        "start_offset_s": 6.2,
+        "duration_s": 1.1,
+        "end": "2026-10-06T16:49:23.471044+00:00"
+      },
+      {
+        "task_id": "stg_orders",
+        "state": "success",
+        "try_number": 1,
+        "start_offset_s": 8.3,
+        "duration_s": 1.2,
+        "end": "2026-10-06T16:49:25.736347+00:00"
+      },
+      {
+        "task_id": "stg_payments",
+        "state": "success",
+        "try_number": 1,
+        "start_offset_s": 10.5,
+        "duration_s": 1.1,
+        "end": "2026-10-06T16:49:27.730289+00:00"
+      },
+      {
+        "task_id": "dq_results",
+        "state": "success",
+        "try_number": 1,
+        "start_offset_s": 11.9,
+        "duration_s": 1.2,
+        "end": "2026-10-06T16:49:29.220684+00:00"
+      },
+      {
+        "task_id": "mart_revenue_by_payment_mode",
+        "state": "success",
+        "try_number": 1,
+        "start_offset_s": 14.1,
+        "duration_s": 3.3,
+        "end": "2026-10-06T16:49:33.511851+00:00"
+      },
+      {
+        "task_id": "mart_daily_store_kpis",
+        "state": "success",
+        "try_number": 1,
+        "start_offset_s": 14.1,
+        "duration_s": 2.3,
+        "end": "2026-10-06T16:49:32.476825+00:00"
+      },
+      {
+        "task_id": "mart_payment_reconciliation",
+        "state": "success",
+        "try_number": 1,
+        "start_offset_s": 14.1,
+        "duration_s": 1.4,
+        "end": "2026-10-06T16:49:31.653698+00:00"
+      },
+      {
+        "task_id": "mart_top_customers",
+        "state": "success",
+        "try_number": 1,
+        "start_offset_s": 14.1,
+        "duration_s": 17.0,
+        "end": "2026-10-06T16:49:47.237134+00:00"
+      },
+      {
+        "task_id": "mart_category_margin",
+        "state": "success",
+        "try_number": 1,
+        "start_offset_s": 14.1,
+        "duration_s": 12.8,
+        "end": "2026-10-06T16:49:43.002127+00:00"
+      },
+      {
+        "task_id": "mart_delivery_sla",
+        "state": "success",
+        "try_number": 1,
+        "start_offset_s": 14.1,
+        "duration_s": 4.9,
+        "end": "2026-10-06T16:49:35.186969+00:00"
+      },
+      {
+        "task_id": "mart_dq_rejections",
+        "state": "success",
+        "try_number": 1,
+        "start_offset_s": 14.1,
+        "duration_s": 8.3,
+        "end": "2026-10-06T16:49:38.603761+00:00"
+      },
+      {
+        "task_id": "report",
+        "state": "success",
+        "try_number": 1,
+        "start_offset_s": 31.1,
+        "duration_s": 0.9,
+        "end": "2026-10-06T16:49:48.162429+00:00"
+      },
+      {
+        "task_id": "write_run_audit_row",
+        "state": "success",
+        "try_number": 1,
+        "start_offset_s": 32.2,
+        "duration_s": 1.1,
+        "end": "2026-10-06T16:49:49.475702+00:00"
+      }
+    ],
+    "retry_attempts": [],
+    "states": {
+      "success": 26
+    },
+    "logical_date": "2026-10-06T16:49:13+00:00",
+    "pipeline_runs": {
+      "status": "SUCCESS",
+      "rows_extracted": 5372,
+      "rows_loaded": 0,
+      "rows_quarantined": 142,
+      "failed_tasks": "",
+      "notes": "{\"merge_inserted\": 0, \"merge_unchanged\": 2550, \"merge_updated\": 0, \"raw_loads\": {\"customers.csv\": \"skipped_unchanged\", \"orders.csv\": \"skipped_unchanged\", \"orders_2026-10-01_increment.csv\": \"skipped_unchanged\", \"payments.csv\": \"skipped_unchanged\", \"products.csv\": \"skipped_unchanged\", \"stores.csv\": \"skipped_unchanged\"}, \"stg_orders_total\": 2550}"
+    },
+    "dq_checks_with_failures": [
+      {
+        "check_name": "BATCH_ORDERS_FRESH",
+        "severity": "Warning",
+        "status": "WARN",
+        "rows_checked": 1,
+        "rows_failed": 1
+      },
+      {
+        "check_name": "CUS_CITY_NOT_NULL",
+        "severity": "Warning",
+        "status": "WARN",
+        "rows_checked": 405,
+        "rows_failed": 6
+      },
+      {
+        "check_name": "CUS_CUSTOMER_ID_UNIQUE",
+        "severity": "Critical",
+        "status": "FAIL",
+        "rows_checked": 405,
+        "rows_failed": 5
+      },
+      {
+        "check_name": "CUS_EMAIL_FORMAT",
+        "severity": "Warning",
+        "status": "WARN",
+        "rows_checked": 405,
+        "rows_failed": 12
+      },
+      {
+        "check_name": "CUS_LOYALTY_TIER_CASING",
+        "severity": "Warning",
+        "status": "WARN",
+        "rows_checked": 405,
+        "rows_failed": 8
+      },
+      {
+        "check_name": "CUS_PHONE_10_DIGITS",
+        "severity": "Warning",
+        "status": "WARN",
+        "rows_checked": 405,
+        "rows_failed": 7
+      },
+      {
+        "check_name": "CUS_PINCODE_6_DIGITS",
+        "severity": "Warning",
+        "status": "WARN",
+        "rows_checked": 405,
+        "rows_failed": 3
+      },
+      {
+        "check_name": "CUS_SIGNUP_DATE_NOT_FUTURE",
+        "severity": "Warning",
+        "status": "WARN",
+        "rows_checked": 405,
+        "rows_failed": 3
+      },
+      {
+        "check_name": "ORD_AMOUNT_MATCHES_FORMULA",
+        "severity": "Critical",
+        "status": "FAIL",
+        "rows_checked": 2562,
+        "rows_failed": 18
+      },
+      {
+        "check_name": "ORD_CUSTOMER_ID_NOT_NULL",
+        "severity": "Critical",
+        "status": "FAIL",
+        "rows_checked": 2562,
+        "rows_failed": 18
+      },
+      {
+        "check_name": "ORD_DELIVERED_HAS_MINUTES",
+        "severity": "Critical",
+        "status": "FAIL",
+        "rows_checked": 2562,
+        "rows_failed": 8
+      },
+      {
+        "check_name": "ORD_DELIVERY_MINUTES_MAX",
+        "severity": "Critical",
+        "status": "FAIL",
+        "rows_checked": 2562,
+        "rows_failed": 6
+      },
+      {
+        "check_name": "ORD_DISCOUNT_RANGE",
+        "severity": "Critical",
+        "status": "FAIL",
+        "rows_checked": 2562,
+        "rows_failed": 3
+      },
+      {
+        "check_name": "ORD_ORDER_ID_UNIQUE",
+        "severity": "Critical",
+        "status": "FAIL",
+        "rows_checked": 2562,
+        "rows_failed": 12
+      },
+      {
+        "check_name": "ORD_ORDER_TS_NOT_FUTURE",
+        "severity": "Critical",
+        "status": "FAIL",
+        "rows_checked": 2562,
+        "rows_failed": 7
+      },
+      {
+        "check_name": "ORD_ORDER_TS_NOT_NULL",
+        "severity": "Critical",
+        "status": "FAIL",
+        "rows_checked": 2562,
+        "rows_failed": 1
+      },
+      {
+        "check_name": "ORD_ORDER_TS_VALID",
+        "severity": "Critical",
+        "status": "FAIL",
+        "rows_checked": 2562,
+        "rows_failed": 5
+      },
+      {
+        "check_name": "ORD_PAYMENT_MODE_STANDARDISED",
+        "severity": "Warning",
+        "status": "WARN",
+        "rows_checked": 2562,
+        "rows_failed": 8
+      },
+      {
+        "check_name": "ORD_PAYMENT_MODE_VALID",
+        "severity": "Critical",
+        "status": "FAIL",
+        "rows_checked": 2562,
+        "rows_failed": 2
+      },
+      {
+        "check_name": "ORD_PRODUCT_EXISTS",
+        "severity": "Critical",
+        "status": "FAIL",
+        "rows_checked": 2562,
+        "rows_failed": 9
+      },
+      {
+        "check_name": "ORD_QUANTITY_POSITIVE",
+        "severity": "Critical",
+        "status": "FAIL",
+        "rows_checked": 2562,
+        "rows_failed": 10
+      },
+      {
+        "check_name": "ORD_STATUS_CASING",
+        "severity": "Warning",
+        "status": "WARN",
+        "rows_checked": 2562,
+        "rows_failed": 2
+      },
+      {
+        "check_name": "ORD_STATUS_VALID",
+        "severity": "Critical",
+        "status": "FAIL",
+        "rows_checked": 2562,
+        "rows_failed": 3
+      },
+      {
+        "check_name": "ORD_STORE_EXISTS",
+        "severity": "Critical",
+        "status": "FAIL",
+        "rows_checked": 2562,
+        "rows_failed": 5
+      },
+      {
+        "check_name": "PAY_AMOUNT_MATCHES_ORDER",
+        "severity": "Warning",
+        "status": "WARN",
+        "rows_checked": 2228,
+        "rows_failed": 14
+      },
+      {
+        "check_name": "PAY_AMOUNT_POSITIVE",
+        "severity": "Critical",
+        "status": "FAIL",
+        "rows_checked": 2228,
+        "rows_failed": 10
+      },
+      {
+        "check_name": "PAY_MODE_STANDARDISED",
+        "severity": "Warning",
+        "status": "WARN",
+        "rows_checked": 2228,
+        "rows_failed": 8
+      },
+      {
+        "check_name": "PAY_MODE_VALID",
+        "severity": "Critical",
+        "status": "FAIL",
+        "rows_checked": 2228,
+        "rows_failed": 2
+      },
+      {
+        "check_name": "PAY_ORDER_EXISTS",
+        "severity": "Critical",
+        "status": "FAIL",
+        "rows_checked": 2228,
+        "rows_failed": 8
+      },
+      {
+        "check_name": "PAY_PAYMENT_ID_UNIQUE",
+        "severity": "Critical",
+        "status": "FAIL",
+        "rows_checked": 2228,
+        "rows_failed": 4
+      },
+      {
+        "check_name": "PAY_TS_NOT_FUTURE",
+        "severity": "Critical",
+        "status": "FAIL",
+        "rows_checked": 2228,
+        "rows_failed": 7
+      },
+      {
+        "check_name": "PRD_CATEGORY_NOT_NULL",
+        "severity": "Warning",
+        "status": "WARN",
+        "rows_checked": 152,
+        "rows_failed": 3
+      },
+      {
+        "check_name": "PRD_COST_LE_MRP",
+        "severity": "Warning",
+        "status": "WARN",
+        "rows_checked": 152,
+        "rows_failed": 4
+      },
+      {
+        "check_name": "PRD_MRP_POSITIVE",
+        "severity": "Warning",
+        "status": "WARN",
+        "rows_checked": 152,
+        "rows_failed": 1
+      },
+      {
+        "check_name": "PRD_PRODUCT_ID_UNIQUE",
+        "severity": "Critical",
+        "status": "FAIL",
+        "rows_checked": 152,
+        "rows_failed": 2
+      },
+      {
+        "check_name": "STO_CAPACITY_POSITIVE",
+        "severity": "Warning",
+        "status": "WARN",
+        "rows_checked": 15,
+        "rows_failed": 1
+      },
+      {
+        "check_name": "STO_ZONE_NOT_NULL",
+        "severity": "Warning",
+        "status": "WARN",
+        "rows_checked": 15,
+        "rows_failed": 1
+      }
+    ],
+    "dq_checks_written": 65,
+    "counts": {
+      "etl_fact_orders": 2458,
+      "etl_fact_delivered_revenue": 1210421.3,
+      "stg_orders_total": 2550,
+      "stg_orders_clean": 2458,
+      "mart_delivered_revenue": 1210421.3,
+      "raw_orders": 2572,
+      "raw_payments": 2228,
+      "raw_customers": 405,
+      "raw_file_registry": 6,
+      "etl_order_changes": 10,
+      "stg_order_changes": 10
+    },
+    "dag_id": "nammamart_elt_sudarshan",
+    "run_id": "exp3b_elt_1006164559",
+    "final_state": "success",
+    "conf": {
+      "data_dir": "/home/sudar/nm_exp/data/with_increment",
+      "warehouse_path": "/home/sudar/nm_exp/w_exp123.duckdb",
+      "load_increments": true,
+      "as_of": ""
+    }
+  }
+}

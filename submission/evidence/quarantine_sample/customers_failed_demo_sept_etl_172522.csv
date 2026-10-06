@@ -1,0 +1,6 @@
+customer_id,full_name,email,phone,city,area,pincode,signup_date,loyalty_tier,is_active,failure_reason,source_file,source_row_num
+C00103,G. N.,ga***@example.com,91******67,Bengaluru,Rajajinagar,560010,2025-12-30,Bronze,Y,CUS_CUSTOMER_ID_UNIQUE,customers.csv,45
+C00252,S. R.,sh***@example.com,97******37,Bengaluru,Yelahanka,560064,2025-06-26,Gold,N,CUS_CUSTOMER_ID_UNIQUE,customers.csv,214
+C00226,P. R.,pr***@example.com,90******43,Bengaluru,BTM Layout,560076,2024-12-22,Silver,Y,CUS_CUSTOMER_ID_UNIQUE,customers.csv,245
+C00036,D. D.,de***@example.com,98******57,Bengaluru,RT Nagar,560032,2024-06-07,Bronze,Y,CUS_CUSTOMER_ID_UNIQUE,customers.csv,265
+C00313,P. H.,pr***@example.com,96******03,Bengaluru,Basaveshwaranagar,560079,2025-09-15,Silver,Y,CUS_CUSTOMER_ID_UNIQUE,customers.csv,381

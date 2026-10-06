@@ -1,0 +1,23 @@
+.git
+.env
+.DS_Store
+airflow_settings.yaml
+__pycache__/
+astro
+.venv
+.astro/standalone/
+airflow-webserver.pid
+webserver_config.py
+airflow.cfg
+airflow.db
+.astro/*.local.yml
+.astro/*.local.yaml
+test_api.py 
+
+# NammaMart pipeline outputs (generated at run time; quarantine/work files can hold row-level data)
+include/warehouse_*.duckdb
+include/warehouse_*.duckdb.wal
+include/work/
+include/quarantine/sudarshan/
+include/data/nammamart_experiments/
+.pytest_cache/
